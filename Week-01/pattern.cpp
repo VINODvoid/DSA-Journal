@@ -8,7 +8,7 @@
 using namespace std;
 void pattern1(int n)
 {
-    cout<<"Pattern 1: "<<endl;
+    cout<<"\nPattern 1: "<<endl;
     for(int i=0;i<n;i++)
     {
         for(int j=0;j<n;j++)
@@ -21,7 +21,7 @@ void pattern1(int n)
 
 void pattern2(int n)
 {
-    cout<<"Pattern 2: "<<endl;
+    cout<<"\nPattern 2: "<<endl;
     for(int i = 0; i < n; i++)
     {
         for(int j=0;j<=i;j++)
@@ -33,7 +33,7 @@ void pattern2(int n)
 }
 void pattern3(int n)
 {
-    cout<<"Pattern 3: "<<endl;
+    cout<<"\nPattern 3: "<<endl;
     for(int i=1;i<=n;i++)
     {
         for(int j=1;j<=i;j++)
@@ -45,7 +45,7 @@ void pattern3(int n)
 }
 void pattern4(int n)
 {
-    cout<<"Pattern 4: "<<endl;
+    cout<<"\nPattern 4: "<<endl;
     for(int i=0;i<n;i++)
     {
         for(int j=0;j<=i;j++)
@@ -57,7 +57,7 @@ void pattern4(int n)
 }
 void pattern5(int n)
 {
-    cout<<"Pattern 5:"<<endl;
+    cout<<"\nPattern 5:"<<endl;
     for(int i=0;i<n;i++)
     {
         for(int j=0;j<n-i;j++)
@@ -69,6 +69,7 @@ void pattern5(int n)
 }
 void pattern6(int n)
 {
+    cout<<"\nPattern 6:"<<endl;
     for(int i=0;i<n;i++)
     {
         for(int j=0;j<n-i;j++)
@@ -80,6 +81,7 @@ void pattern6(int n)
 }
 void pattern7(int n)
 {
+    cout<<"\nPattern 7:"<<endl;
     for(int i=0;i<n;i++)
     {
         // space loop
@@ -102,10 +104,29 @@ void pattern7(int n)
 }
 void pattern8(int n)
 {
+    cout<<"\nPattern 8:" <<endl;
     for(int i=0;i<n;i++)
     {
-        
+        // space loop
+        for(int j=0;j<=i;j++)
+        {
+            cout<<" ";
+        }
+        // space loop
+        for(int j=0;j<(2*n-(2*i+1));j++)
+        {
+            cout<<"*";
+        }// space loop
+        for(int j=0;j<=i;j++)
+        {
+            cout<<" ";
+        }
+        cout<<endl;
     }
+}
+void pattern9(int n)
+{
+    
 }
 int main(){
     int n;
