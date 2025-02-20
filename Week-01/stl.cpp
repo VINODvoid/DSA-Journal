@@ -81,6 +81,12 @@ void vectors()
         cout<<it<<" ";
     }
     cout<<endl;
+
+    // deleting the elements from the vector
+    v.erase(v.begin()+1);
+    cout<<v.size()<<endl;
+
+    v.erase(v.begin()+1,v.begin()+2);
 }
 int main()
 {
