@@ -1,5 +1,6 @@
 // STL - Standard Template Library
 #include<bits/stdc++.h>
+#include <unordered_set>
 using namespace std;
 
 void pairs()
@@ -229,6 +230,29 @@ void multisets()
     ms.erase(ms.find(2)); // removes the first element of 2
 
 }
+void unorderedsets()
+{
+   unordered_set<int>us;
+    
+}
+void maps()
+{
+    map<int,int>mp;
+    map<int, pair<int,int> >mp1;
+    map<pair<int,int>,int>mp2;
+
+    mp[1] = 2; // {1:2}
+    mp.emplace(2,3); // {1:2,2:3}
+
+    for(auto it:mp)
+    {
+        cout<<it.first<<" "<<it.second<<endl;
+    }
+    cout<<mp[1];
+    cout<<mp.at(5); // returns null 
+    
+
+}
 int main()
 {
     // pairs();
@@ -240,7 +264,8 @@ int main()
     // prioritys();
     // sets();
     // multisets();
-    
+    // unorderedsets();
+    //maps();
     return 0;
 
 }
