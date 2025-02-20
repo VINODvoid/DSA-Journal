@@ -250,8 +250,13 @@ void maps()
     }
     cout<<mp[1];
     cout<<mp.at(5); // returns null 
-    
 
+
+}
+void multimaps()
+{
+    // everything is same as map but  we can store duplicate keys
+    multimap<int,int>mp;
 }
 int main()
 {
@@ -266,6 +271,8 @@ int main()
     // multisets();
     // unorderedsets();
     //maps();
+    // multimaps();
+    
     return 0;
 
 }
