@@ -87,6 +87,31 @@ void vectors()
     cout<<v.size()<<endl;
 
     v.erase(v.begin()+1,v.begin()+2);
+
+
+    // insertion of the elements in the vector
+    vector<int>vect(2,100);
+    vect.insert(vect.begin(),300);
+    vect.insert(vect.begin()+1,200);
+    
+
+    vect.insert(v.begin()+1,2,5);
+    // cout<<vect[2]<<endl;
+    // cout<<vect[3]<<endl;
+    
+
+    // copy the elements of the vector to another vector
+    vector<int> vect1(2,50);
+    v.insert(v.begin(),vect1.begin(),vect1.end());
+    
+
+    v.pop_back(); // removes the last element
+    v.swap(vec); // swaps the elements of the vector
+    cout<<v.size()<<endl; // size of the vector
+
+    v.clear(); // removes all the elements of the vector
+    cout<<v.empty(); // checks whether the vector is empty or not
+    
 }
 int main()
 {
