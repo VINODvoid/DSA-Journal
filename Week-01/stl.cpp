@@ -113,10 +113,134 @@ void vectors()
     cout<<v.empty(); // checks whether the vector is empty or not
     
 }
+void lists(){
+    list<int> ls;
+    ls.push_back(1); // {1}
+    ls.emplace_back(2); // {1,2}
+
+    ls.push_front(3); // {3,1,2}
+    ls.emplace_front()=(4,5); // {4,5,3,1,2}
+
+    // rest functions are same as vectors
+    // begin , end , rbegin , rend , clear , insert , size,swap
+}
+void deques(){
+    deque<int> dq;
+    dq.push_back(1); // {1}
+    dq.push_front(2); // {2,1}
+    dq.emplace_back(3); // {2,1,3}
+    dq.emplace_front(4); // {4,2,1,3}
+
+    // rest functions are same as vectors
+    // begin , end , rbegin , rend , clear , insert , size,swap
+    dq.pop_back(); // {4,2,1}
+    dq.pop_front(); // {2,1}
+
+}
+void stacks()
+{
+    stack<int>s;
+    s.push(1); // {1}
+    s.push(2); // {2,1}
+    s.push(3); // {3,2,1}
+    s.push(4); // {4,3,2,1}
+    s.emplace(5); // {5,4,3,2,1}
+
+    cout<<s.top()<<endl; // 5
+    s.pop(); // {4,3,2,1}
+    cout<<s.size()<<endl; // 4
+    cout<<s.empty()<<endl; // 0 - false
+
+    stack<int>st1,st2; 
+    st1.swap(st2); // swaps the elements of the stack
+    
+}
+void queues()
+{
+    queue<int>q;
+    q.push(1); // {1}
+    q.push(2); // {1,2}
+    q.emplace(3); // {1,2,3}
+
+    q.back(); // 3 - last element in queue
+    cout<<q.front()<<endl; // 1 - first element
+    q.pop(); // {2,3}
+
+}
+void prioritys()
+{
+    // maximum heap
+    priority_queue<int>pq;
+    pq.push(1); // {1}
+    pq.push(2); // {2,1}
+    pq.push(3); // {3,2,1}
+    pq.emplace(4); // {4,3,2,1}
+
+    cout<<pq.top()<<endl; // 4
+    pq.pop(); // {3,2,1}
+    cout<<pq.size()<<endl; // 3
+
+    // size swap empty functions are same as stack
+    // minimum heap 
+    priority_queue<int ,vector<int> , greater<int>>pq1;
+    pq1.push(1); // {1}
+    pq1.push(2); // {1,2}
+    pq1.push(3); // {1,2,3}
+    pq1.emplace(4); // {1,2,3,4}
+
+    cout<<pq1.top()<<endl; // 1
+}
+void sets()
+{
+    // set is a container that stores unique elements and in sorted order.
+    set<int>s;
+    s.insert(1); // {1}
+    s.emplace(2); // {1,2}
+    s.insert(3); // {1,2,3}
+    s.insert(4); // {1,2,3,4}
+
+    // Functionality of insertion is same as vector
+
+    auto it = s.find(3); // returns the iterator to the element 3
+    auto it = s.find(11);// returns the iterator to the end of the set
+
+    s.erase(3); // {1,2,4} - removes the element 3
+
+    int count = s.count(4); // 1 - returns the count of the element 4 but set as unique elements so it will be 1 or 0.
+
+
+    auto it = s.find(3);
+    s.erase(it); // {1,2,4} - removes the element 3
+
+
+    auto it = s.lower_bound(2);
+    auto it = s.upper_bound(2);
+
+}
+void multisets()
+{
+    // Multiset is a container that stores multiple elements and in sorted order.
+    multiset<int>ms;
+    ms.insert(1); // {1}
+    ms.insert(2); // {1,2}
+    ms.insert(2); // {1,2,2}
+
+    ms.erase(2); // removes all the elements of 2
+    ms.erase(ms.find(2)); // removes the first element of 2
+
+}
 int main()
 {
     // pairs();
-    vectors();
+    // vectors();
+    // lists();
+    // deques();
+    // stacks();
+    // queues();
+    // prioritys();
+    // sets();
+    // multisets();
+    
     return 0;
 
 }
