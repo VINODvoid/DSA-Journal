@@ -12,5 +12,6 @@ int main()
     cout<<"Enter the Max element"<<endl;
     cin>>n ;
     backtrackPrint(n,n);
+    
     return 0;
 }
