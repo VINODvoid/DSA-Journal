@@ -8,6 +8,7 @@ int main(){
     printNum(n,1);
     return 0;
 }
+
 void printNum(int n,int i)
 {
     if(n<i) return;
