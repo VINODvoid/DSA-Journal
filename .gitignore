@@ -1,1 +1,9 @@
-/bin/
+# Ignore all files inside Week-*/ that have NO extension (i.e., likely compiled binaries)
+Week-*/[!.]*
+
+# But keep .cpp files
+!Week-*/*.cpp
+
+# Also keep directories, gitignore itself, and important files
+!.gitignore
+!README
