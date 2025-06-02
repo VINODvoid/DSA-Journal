@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-void countNum(int n, int arr[]);
 int main()
 {
     int n;
