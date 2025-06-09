@@ -1,13 +1,7 @@
 #include<iostream>
 using namespace std;
 void quick_sort(int arr[],int n)
-{
-    quick_sort(arr,3);
-    quick_sort(arr,6);
-    quick_sort(arr,8);
-    exit(0);
-    
-}
+{}
 int main()
 {
     int n;
