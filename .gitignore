@@ -1,9 +1,9 @@
 # Ignore all files inside Week-*/ that have NO extension (i.e., likely compiled binaries)
 Week-*/[!.]*
-
+LeetCode/[!.]*
 # But keep .cpp files
 !Week-*/*.cpp
-
+!LeetCode/*.cpp
 # Also keep directories, gitignore itself, and important files
 !.gitignore
 !README
