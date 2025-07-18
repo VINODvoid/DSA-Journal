@@ -4,12 +4,12 @@ bool sorted_array(int arr[],int n)
 {
     for(int i=0;i<n;i++)
     {
-        if(arr[i]<arr[i+1])
+        if(arr[i]>arr[i+1])
         {
-            return true;
+            return false;
         }
     }
-    return false;
+    return true;
 }
 int main()
 {
@@ -21,6 +21,13 @@ int main()
         cin>>arr[i];
     }
     bool isSorted = sorted_array(arr,n);
-    cout<<"Given array is sorted: " << isSorted;
+    if(isSorted == 1)
+    {
+        cout<<"Sorted";
+    }
+    else{
+        cout<<"Not sorted"<<endl;
+    }
+    
     return 0;
 }
